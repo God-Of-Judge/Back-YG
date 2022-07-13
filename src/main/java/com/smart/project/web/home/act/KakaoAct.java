@@ -83,30 +83,30 @@ public class KakaoAct {
     }
 
 
-
-    @RequestMapping("/test99")
-    public void kakaoTest99(){
-        URL url = new URL("https://kauth.kakao.com/v2/push/register");
-        String postData = "foo1=bar1&foo2=bar2";
-
-        URLConnection conn = url.openConnection();
-        conn.setDoOutput(true);
-        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-        conn.setRequestProperty("Authorization", "");
-
-        try (DataOutputStream dos = new DataOutputStream(conn.getOutputStream())) {
-            dos.writeBytes(postData);
-        }
-
-        try (BufferedReader bf = new BufferedReader(new InputStreamReader(
-                conn.getInputStream())))
-        {
-            String line;
-            while ((line = bf.readLine()) != null) {
-                System.out.println(line);
-            }
-        }
-    }
+//
+//    @RequestMapping("/test99")
+//    public void kakaoTest99(){
+//        URL url = new URL("https://kauth.kakao.com/v2/push/register");
+//        String postData = "foo1=bar1&foo2=bar2";
+//
+//        URLConnection conn = url.openConnection();
+//        conn.setDoOutput(true);
+//        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+//        conn.setRequestProperty("Authorization", "");
+//
+//        try (DataOutputStream dos = new DataOutputStream(conn.getOutputStream())) {
+//            dos.writeBytes(postData);
+//        }
+//
+//        try (BufferedReader bf = new BufferedReader(new InputStreamReader(
+//                conn.getInputStream())))
+//        {
+//            String line;
+//            while ((line = bf.readLine()) != null) {
+//                System.out.println(line);
+//            }
+//        }
+//    }
 
 
 
